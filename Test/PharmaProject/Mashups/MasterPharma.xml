@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b222"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="4"
+ schemaVersion="1053"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="target"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="MasterPharma"
+         projectName="PharmaProject"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="Administrator"
+                         type="User"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="Administrator"
+                         type="User"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Administrator"
+                         type="User"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Administrator"
+                         type="User"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="Administrator"
+                         type="User"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="Pharma_Manufactoring"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates>
+                <ThingTemplate>PharmaTemplate</ThingTemplate>
+            </ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "DynamicThingTemplates_PharmaTemplate" : {
+                  "DataName" : "DynamicThingTemplates_PharmaTemplate",
+                  "EntityName" : "PharmaTemplate",
+                  "EntityType" : "DynamicThingTemplates",
+                  "Id" : "06f6e719-b3af-4fe3-beec-0b37a471e8a9",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "8ea13923-4c17-4132-bb45-b14a5c0a9666",
+                    "Name" : "GetPropertyValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetPropertyValues"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "75314a9f-75b3-48b4-ba51-91418ec154bd",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Label",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetPropertyValues",
+                "SourceSection" : "DynamicThingTemplates_PharmaTemplate",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsdropdown-20",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_PharmaTemplate",
+                "EventHandlerService" : "GetPropertyValues",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "f5a63e8b-5ea2-440f-90bb-2487af01b07a"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "DefaultPageMashup" : "PharmaMapMashup",
+                  "DisplayName" : "Mashup",
+                  "DropShadow" : false,
+                  "Font" : "Arial, Helvetica",
+                  "Height" : 768,
+                  "Id" : "mashup-root",
+                  "Left" : 0,
+                  "MashupResolution" : "HD 1280x720",
+                  "MaxWidth" : 0,
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMasterMashupStyle",
+                  "StyleTheme" : "PTC Convergence Theme",
+                  "Title" : "",
+                  "Top" : 0,
+                  "Type" : "targetmashup",
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "WindowStyle" : "DefaultMasterWindowStyle",
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Master Mashup",
+                  "align-content" : "stretch",
+                  "align-items" : "stretch",
+                  "flex-basis" : "auto",
+                  "flex-direction" : "column",
+                  "flex-grow" : 1,
+                  "flex-height" : 0,
+                  "flex-shrink" : 0,
+                  "flex-width" : 0,
+                  "flex-wrap" : "nowrap",
+                  "id_index" : 26,
+                  "justify-content" : "flex-start",
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Blank",
+                    "EnableExpandCollapse" : false,
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-1",
+                    "LastContainer" : true,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Type" : "flexcontainer",
+                    "UseTheme" : false,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Container",
+                    "align-content" : "stretch",
+                    "align-items" : "stretch",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "column",
+                    "flex-grow" : 1,
+                    "flex-height" : 0,
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : 0,
+                    "flex-size" : "default",
+                    "flex-width" : 0,
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "isLocked" : true,
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : false
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "Page Mashup",
+                      "Height" : 300,
+                      "Id" : "pagemashupcontainer-2",
+                      "LastContainer" : false,
+                      "Left" : 0,
+                      "Margin" : "5",
+                      "Name" : "",
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "Top" : 0,
+                      "Type" : "pagemashupcontainer",
+                      "Visible" : true,
+                      "Width" : 400,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Page Mashup Container"
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "Columns" : 0,
+                      "DisplayName" : "layout-3",
+                      "Footer" : false,
+                      "FooterHeight" : 0,
+                      "Header" : true,
+                      "HeaderHeight" : 100,
+                      "Id" : "layout-3",
+                      "IncludeSpacingInFixedAreas" : false,
+                      "IsPrintLayout" : false,
+                      "LastContainer" : false,
+                      "Left" : 155,
+                      "LeftSidebar" : false,
+                      "LeftSidebarWidth" : 0,
+                      "Orientation" : "vertical",
+                      "PctColumn1" : 50,
+                      "PctColumn2" : 50,
+                      "PctColumn3" : 1,
+                      "PctColumn4" : 1,
+                      "PctColumn5" : 1,
+                      "PctColumn6" : 1,
+                      "PctColumn7" : 1,
+                      "PctColumn8" : 1,
+                      "PctRow1" : 100,
+                      "PctRow2" : 0,
+                      "PctRow3" : 0,
+                      "PctRow4" : 0,
+                      "PctRow5" : 0,
+                      "PctRow6" : 0,
+                      "PctRow7" : 0,
+                      "PctRow8" : 0,
+                      "PrintMarginLeftRight" : 0.5,
+                      "PrintMarginTopBottom" : 0.5,
+                      "PrintWidth" : 650,
+                      "ResponsiveLayout" : true,
+                      "RightSidebar" : false,
+                      "RightSidebarWidth" : 0,
+                      "Rows" : 1,
+                      "ShowDataLoading" : true,
+                      "Spacing" : 1,
+                      "Top" : 70,
+                      "Type" : "layout",
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Layout"
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "AnimateExpandCollapse" : true,
+                        "Area" : "UI",
+                        "BGImageRepeat" : "no-repeat",
+                        "BGImageSize" : "auto",
+                        "DisplayName" : "Header",
+                        "ExpandCollapseTabLocation" : "outside",
+                        "Expanded" : true,
+                        "Id" : "container-4",
+                        "LastContainer" : false,
+                        "MinHeight" : 0,
+                        "MinWidth" : 0,
+                        "Overlay" : false,
+                        "OverlayIsTransparent" : false,
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "ShowExpandCollapseTab" : false,
+                        "Style" : "DefaultContainerStyle",
+                        "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                        "TabExpandStyle" : "DefaultTabExpandStyle",
+                        "TabHeight" : 36,
+                        "TabLocation" : "center",
+                        "TabOffset" : 0,
+                        "TabWidth" : 36,
+                        "Type" : "container",
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Container",
+                        "userCannotRemove" : true
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "DisplayName" : "panel-16",
+                          "Height" : 200,
+                          "HideScrollbars" : false,
+                          "HorizontalAnchor" : "left",
+                          "Id" : "panel-16",
+                          "LastContainer" : false,
+                          "Left" : 175,
+                          "ResponsiveLayout" : true,
+                          "ShowDataLoading" : true,
+                          "Style" : "DefaultPanelStyle",
+                          "Top" : 35,
+                          "Type" : "panel",
+                          "VerticalAnchor" : "top",
+                          "Visible" : true,
+                          "Width" : 300,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Panel"
+                        },
+                        "Widgets" : [ {
+                          "Properties" : {
+                            "Alignment" : "left",
+                            "Area" : "UI",
+                            "AutoSelectFirstRow" : false,
+                            "ClearSelectedItemsLabel" : "[[clearSelectedItems]]",
+                            "ClearSelectionItem" : true,
+                            "ClearSelectionLabel" : "(None)",
+                            "Disabled" : false,
+                            "DisplayName" : "ptcs-dropdown-17",
+                            "FilterHintText" : "Filter",
+                            "HintText" : "Select Enterprise",
+                            "Id" : "ptcsdropdown-17",
+                            "ItemMeta" : {
+                              "type" : "text"
+                            },
+                            "Label" : "",
+                            "LabelAlignment" : "left",
+                            "LastContainer" : false,
+                            "Left" : 8,
+                            "MultiSelect" : false,
+                            "ResponsiveLayout" : false,
+                            "RowHeight" : 34,
+                            "SelectAllLabel" : "[[selectAll]]",
+                            "ShowDataLoading" : true,
+                            "ShowListFilter" : false,
+                            "TabSequence" : -1,
+                            "Top" : 24,
+                            "Type" : "ptcsdropdown",
+                            "UseTheme" : true,
+                            "Visible" : true,
+                            "Width" : 193,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "DropDown"
+                          },
+                          "Widgets" : [ ]
+                        }, {
+                          "Properties" : {
+                            "Alignment" : "left",
+                            "Area" : "UI",
+                            "AutoSelectFirstRow" : false,
+                            "ClearSelectedItemsLabel" : "[[clearSelectedItems]]",
+                            "ClearSelectionItem" : true,
+                            "ClearSelectionLabel" : "(None)",
+                            "Disabled" : false,
+                            "DisplayName" : "ptcsdropdown-18",
+                            "FilterHintText" : "Filter",
+                            "HintText" : "Select Country",
+                            "Id" : "ptcsdropdown-18",
+                            "ItemMeta" : {
+                              "type" : "text"
+                            },
+                            "Label" : "",
+                            "LabelAlignment" : "left",
+                            "LastContainer" : false,
+                            "Left" : 339.98753356933594,
+                            "MultiSelect" : false,
+                            "ResponsiveLayout" : false,
+                            "RowHeight" : 34,
+                            "SelectAllLabel" : "[[selectAll]]",
+                            "ShowDataLoading" : true,
+                            "ShowListFilter" : false,
+                            "TabSequence" : -1,
+                            "Top" : 23,
+                            "Type" : "ptcsdropdown",
+                            "UseTheme" : true,
+                            "Visible" : true,
+                            "Width" : 193,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "DropDown"
+                          },
+                          "Widgets" : [ ]
+                        }, {
+                          "Properties" : {
+                            "Alignment" : "left",
+                            "Area" : "UI",
+                            "AutoSelectFirstRow" : false,
+                            "ClearSelectedItemsLabel" : "[[clearSelectedItems]]",
+                            "ClearSelectionItem" : true,
+                            "ClearSelectionLabel" : "(None)",
+                            "Disabled" : false,
+                            "DisplayName" : "ptcsdropdown-19",
+                            "FilterHintText" : "Filter",
+                            "HintText" : "Select State",
+                            "Id" : "ptcsdropdown-19",
+                            "ItemMeta" : {
+                              "type" : "text"
+                            },
+                            "Label" : "",
+                            "LabelAlignment" : "left",
+                            "LastContainer" : false,
+                            "Left" : 678.9874992370605,
+                            "MultiSelect" : false,
+                            "ResponsiveLayout" : false,
+                            "RowHeight" : 34,
+                            "SelectAllLabel" : "[[selectAll]]",
+                            "ShowDataLoading" : true,
+                            "ShowListFilter" : false,
+                            "TabSequence" : -1,
+                            "Top" : 27,
+                            "Type" : "ptcsdropdown",
+                            "UseTheme" : true,
+                            "Visible" : true,
+                            "Width" : 193,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "DropDown"
+                          },
+                          "Widgets" : [ ]
+                        }, {
+                          "Properties" : {
+                            "Alignment" : "left",
+                            "Area" : "UI",
+                            "AutoSelectFirstRow" : false,
+                            "ClearSelectedItemsLabel" : "[[clearSelectedItems]]",
+                            "ClearSelectionItem" : true,
+                            "ClearSelectionLabel" : "(None)",
+                            "Disabled" : false,
+                            "DisplayName" : "ptcsdropdown-20",
+                            "FilterHintText" : "Filter",
+                            "HintText" : "Select Plant",
+                            "Id" : "ptcsdropdown-20",
+                            "ItemMeta" : {
+                              "type" : "text"
+                            },
+                            "Label" : "",
+                            "LabelAlignment" : "left",
+                            "LastContainer" : false,
+                            "Left" : 997.0000152587891,
+                            "MultiSelect" : false,
+                            "ResponsiveLayout" : false,
+                            "RowHeight" : 34,
+                            "SelectAllLabel" : "[[selectAll]]",
+                            "ShowDataLoading" : true,
+                            "ShowListFilter" : false,
+                            "TabSequence" : -1,
+                            "Top" : 26,
+                            "Type" : "ptcsdropdown",
+                            "UseTheme" : true,
+                            "Visible" : true,
+                            "Width" : 193,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "DropDown"
+                          },
+                          "Widgets" : [ ]
+                        } ]
+                      } ]
+                    }, {
+                      "Properties" : {
+                        "AnimateExpandCollapse" : true,
+                        "Area" : "UI",
+                        "BGImageRepeat" : "no-repeat",
+                        "BGImageSize" : "auto",
+                        "DisplayName" : "Row 1",
+                        "ExpandCollapseTabLocation" : "outside",
+                        "Expanded" : true,
+                        "Id" : "container-5",
+                        "LastContainer" : false,
+                        "MinHeight" : 0,
+                        "MinWidth" : 0,
+                        "Overlay" : false,
+                        "OverlayIsTransparent" : false,
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "ShowExpandCollapseTab" : false,
+                        "Style" : "DefaultContainerStyle",
+                        "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                        "TabExpandStyle" : "DefaultTabExpandStyle",
+                        "TabHeight" : 36,
+                        "TabLocation" : "center",
+                        "TabOffset" : 0,
+                        "TabWidth" : 36,
+                        "Type" : "container",
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Container",
+                        "userCannotRemove" : true
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "Columns" : 1,
+                          "DisplayName" : "layout-6",
+                          "Footer" : false,
+                          "FooterHeight" : 0,
+                          "Header" : false,
+                          "HeaderHeight" : 0,
+                          "Id" : "layout-6",
+                          "IncludeSpacingInFixedAreas" : false,
+                          "IsPrintLayout" : false,
+                          "LastContainer" : false,
+                          "Left" : 60,
+                          "LeftSidebar" : true,
+                          "LeftSidebarWidth" : 100,
+                          "Orientation" : "horizontal",
+                          "PctColumn1" : 100,
+                          "PctColumn2" : 0,
+                          "PctColumn3" : 1,
+                          "PctColumn4" : 1,
+                          "PctColumn5" : 1,
+                          "PctColumn6" : 1,
+                          "PctColumn7" : 1,
+                          "PctColumn8" : 1,
+                          "PctRow1" : 50,
+                          "PctRow2" : 50,
+                          "PctRow3" : 0,
+                          "PctRow4" : 0,
+                          "PctRow5" : 0,
+                          "PctRow6" : 0,
+                          "PctRow7" : 0,
+                          "PctRow8" : 0,
+                          "PrintMarginLeftRight" : 0.5,
+                          "PrintMarginTopBottom" : 0.5,
+                          "PrintWidth" : 650,
+                          "ResponsiveLayout" : true,
+                          "RightSidebar" : false,
+                          "RightSidebarWidth" : 0,
+                          "Rows" : 0,
+                          "ShowDataLoading" : true,
+                          "Spacing" : 2,
+                          "Top" : 75,
+                          "Type" : "layout",
+                          "Visible" : true,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Layout"
+                        },
+                        "Widgets" : [ {
+                          "Properties" : {
+                            "AnimateExpandCollapse" : true,
+                            "Area" : "UI",
+                            "BGImageRepeat" : "no-repeat",
+                            "BGImageSize" : "auto",
+                            "DisplayName" : "Left Sidebar",
+                            "ExpandCollapseTabLocation" : "outside",
+                            "Expanded" : true,
+                            "Id" : "container-7",
+                            "LastContainer" : false,
+                            "MinHeight" : 0,
+                            "MinWidth" : 0,
+                            "Overlay" : false,
+                            "OverlayIsTransparent" : false,
+                            "ResponsiveLayout" : true,
+                            "ShowDataLoading" : true,
+                            "ShowExpandCollapseTab" : false,
+                            "Style" : "DefaultContainerStyle",
+                            "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                            "TabExpandStyle" : "DefaultTabExpandStyle",
+                            "TabHeight" : 36,
+                            "TabLocation" : "center",
+                            "TabOffset" : 0,
+                            "TabWidth" : 36,
+                            "Type" : "container",
+                            "Visible" : true,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Container",
+                            "userCannotRemove" : true
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "DisplayName" : "panel-25",
+                              "Height" : 200,
+                              "HideScrollbars" : false,
+                              "HorizontalAnchor" : "left",
+                              "Id" : "panel-25",
+                              "LastContainer" : false,
+                              "Left" : 10,
+                              "ResponsiveLayout" : true,
+                              "ShowDataLoading" : true,
+                              "Style" : "DefaultPanelStyle",
+                              "Top" : 50,
+                              "Type" : "panel",
+                              "VerticalAnchor" : "top",
+                              "Visible" : true,
+                              "Width" : 300,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Panel"
+                            },
+                            "Widgets" : [ {
+                              "Properties" : {
+                                "Alignment" : "left",
+                                "AllButTopRememberLastChoice" : true,
+                                "Area" : "UI",
+                                "ConfiguredOrDataDriven" : "configured",
+                                "DisplayName" : "menu-26",
+                                "DrivePageMashupOrBindToMashup" : "pagemashup",
+                                "EvenlySpacedMenuItems" : false,
+                                "Height" : 30,
+                                "IconMaxWidth" : 22,
+                                "Id" : "menu-26",
+                                "LastContainer" : false,
+                                "Left" : 0,
+                                "Levels" : "all",
+                                "Menu" : "PharmaMenu",
+                                "MenuBackgroundStyle" : "DefaultMenuBackgroundStyle",
+                                "MenuHoverStyle" : "DefaultMenuHoverStyle",
+                                "MenuItemDisplay" : "iconleftoftext",
+                                "MenuLevelHoverStyle" : "DefaultMenuLevelHoverStyle",
+                                "MenuLevelSelectedStyle" : "DefaultMenuLevelSelectedStyle",
+                                "MenuLevelStyle" : "DefaultMenuLevelStyle",
+                                "MenuSelectedStyle" : "DefaultMenuSelectedStyle",
+                                "MenuStyle" : "DefaultMenuStyle",
+                                "ResponsiveLayout" : false,
+                                "ShowDataLoading" : true,
+                                "SubMenuHeight" : 25,
+                                "SubmenuWidthMatchParent" : false,
+                                "Top" : 7,
+                                "Type" : "menu",
+                                "View" : "horiz",
+                                "Visible" : true,
+                                "Width" : 250,
+                                "Z-index" : 10,
+                                "__TypeDisplayName" : "Menu"
+                              },
+                              "Widgets" : [ ]
+                            } ]
+                          } ]
+                        }, {
+                          "Properties" : {
+                            "AnimateExpandCollapse" : true,
+                            "Area" : "UI",
+                            "BGImageRepeat" : "no-repeat",
+                            "BGImageSize" : "auto",
+                            "DisplayName" : "Column 1",
+                            "ExpandCollapseTabLocation" : "outside",
+                            "Expanded" : true,
+                            "Id" : "container-8",
+                            "LastContainer" : false,
+                            "MinHeight" : 0,
+                            "MinWidth" : 0,
+                            "Overlay" : false,
+                            "OverlayIsTransparent" : false,
+                            "ResponsiveLayout" : true,
+                            "ShowDataLoading" : true,
+                            "ShowExpandCollapseTab" : false,
+                            "Style" : "DefaultContainerStyle",
+                            "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                            "TabExpandStyle" : "DefaultTabExpandStyle",
+                            "TabHeight" : 36,
+                            "TabLocation" : "center",
+                            "TabOffset" : 0,
+                            "TabWidth" : 36,
+                            "Type" : "container",
+                            "Visible" : true,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Container",
+                            "userCannotRemove" : true
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "Area" : "UI",
+                              "Columns" : 0,
+                              "DisplayName" : "layout-9",
+                              "Footer" : false,
+                              "FooterHeight" : 0,
+                              "Header" : true,
+                              "HeaderHeight" : 100,
+                              "Id" : "layout-9",
+                              "IncludeSpacingInFixedAreas" : false,
+                              "IsPrintLayout" : false,
+                              "LastContainer" : false,
+                              "Left" : 75,
+                              "LeftSidebar" : false,
+                              "LeftSidebarWidth" : 0,
+                              "Orientation" : "vertical",
+                              "PctColumn1" : 50,
+                              "PctColumn2" : 50,
+                              "PctColumn3" : 1,
+                              "PctColumn4" : 1,
+                              "PctColumn5" : 1,
+                              "PctColumn6" : 1,
+                              "PctColumn7" : 1,
+                              "PctColumn8" : 1,
+                              "PctRow1" : 100,
+                              "PctRow2" : 0,
+                              "PctRow3" : 0,
+                              "PctRow4" : 0,
+                              "PctRow5" : 0,
+                              "PctRow6" : 0,
+                              "PctRow7" : 0,
+                              "PctRow8" : 0,
+                              "PrintMarginLeftRight" : 0.5,
+                              "PrintMarginTopBottom" : 0.5,
+                              "PrintWidth" : 650,
+                              "ResponsiveLayout" : true,
+                              "RightSidebar" : false,
+                              "RightSidebarWidth" : 0,
+                              "Rows" : 1,
+                              "ShowDataLoading" : true,
+                              "Spacing" : 2,
+                              "Top" : 30,
+                              "Type" : "layout",
+                              "Visible" : true,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Layout"
+                            },
+                            "Widgets" : [ {
+                              "Properties" : {
+                                "AnimateExpandCollapse" : true,
+                                "Area" : "UI",
+                                "BGImageRepeat" : "no-repeat",
+                                "BGImageSize" : "auto",
+                                "DisplayName" : "Header",
+                                "ExpandCollapseTabLocation" : "outside",
+                                "Expanded" : true,
+                                "Id" : "container-10",
+                                "LastContainer" : false,
+                                "MinHeight" : 0,
+                                "MinWidth" : 0,
+                                "Overlay" : false,
+                                "OverlayIsTransparent" : false,
+                                "ResponsiveLayout" : true,
+                                "ShowDataLoading" : true,
+                                "ShowExpandCollapseTab" : false,
+                                "Style" : "DefaultContainerStyle",
+                                "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                                "TabExpandStyle" : "DefaultTabExpandStyle",
+                                "TabHeight" : 36,
+                                "TabLocation" : "center",
+                                "TabOffset" : 0,
+                                "TabWidth" : 36,
+                                "Type" : "container",
+                                "Visible" : true,
+                                "Z-index" : 10,
+                                "__TypeDisplayName" : "Container",
+                                "userCannotRemove" : true
+                              },
+                              "Widgets" : [ {
+                                "Properties" : {
+                                  "Area" : "UI",
+                                  "DisplayName" : "panel-21",
+                                  "Height" : 200,
+                                  "HideScrollbars" : false,
+                                  "HorizontalAnchor" : "left",
+                                  "Id" : "panel-21",
+                                  "LastContainer" : false,
+                                  "Left" : 30,
+                                  "ResponsiveLayout" : true,
+                                  "ShowDataLoading" : true,
+                                  "Style" : "DefaultPanelStyle",
+                                  "Top" : 30,
+                                  "Type" : "panel",
+                                  "VerticalAnchor" : "top",
+                                  "Visible" : true,
+                                  "Width" : 300,
+                                  "Z-index" : 10,
+                                  "__TypeDisplayName" : "Panel"
+                                },
+                                "Widgets" : [ {
+                                  "Properties" : {
+                                    "Alignment" : "left",
+                                    "Area" : "UI",
+                                    "ClickOutsideToClose" : false,
+                                    "DisplayName" : "navigation-22",
+                                    "FixedPopupHeight" : 0,
+                                    "FixedPopupWidth" : 0,
+                                    "Height" : 30,
+                                    "Icon" : "",
+                                    "IconAlignment" : "left",
+                                    "Id" : "navigation-22",
+                                    "LastContainer" : false,
+                                    "Left" : 5,
+                                    "MashupName" : "PharmaMapMashup",
+                                    "MashupParameters" : [ ],
+                                    "MessageToShow" : "Mashup must be selected",
+                                    "ModalPopupOpacity" : 0.5,
+                                    "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+                                    "NavigationFocusStyle" : "DefaultNavigationFocusStyle",
+                                    "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+                                    "PopupScrolling" : "auto",
+                                    "PopupTitle" : "",
+                                    "PopupTitleStyle" : "DefaultPopupTitleStyle",
+                                    "ReloadOnReplace" : false,
+                                    "ResponsiveLayout" : false,
+                                    "RoundedCorners" : true,
+                                    "ShowCloseButton" : true,
+                                    "ShowDataLoading" : true,
+                                    "ShowMessageIfNoMashup" : false,
+                                    "SingleClickSelectOnTablets" : true,
+                                    "Style" : "DefaultNavigationStyle",
+                                    "TabSequence" : 0,
+                                    "TargetWindow" : "replace",
+                                    "Text" : "Map View",
+                                    "ToolTipField" : "",
+                                    "ToolTipStyle" : "DefaultTooltipStyle",
+                                    "Top" : 28,
+                                    "Transparent" : false,
+                                    "Type" : "navigation",
+                                    "Visible" : true,
+                                    "Width" : 200,
+                                    "Z-index" : 10,
+                                    "__TypeDisplayName" : "Navigation",
+                                    "__supportsTooltip" : true
+                                  },
+                                  "Widgets" : [ ]
+                                }, {
+                                  "Properties" : {
+                                    "Alignment" : "left",
+                                    "Area" : "UI",
+                                    "ClickOutsideToClose" : false,
+                                    "DisplayName" : "navigation-23",
+                                    "FixedPopupHeight" : 0,
+                                    "FixedPopupWidth" : 0,
+                                    "Height" : 30,
+                                    "Icon" : "",
+                                    "IconAlignment" : "left",
+                                    "Id" : "navigation-23",
+                                    "LastContainer" : false,
+                                    "Left" : 235.99996948242188,
+                                    "MashupName" : "PharmaGridMashup",
+                                    "MashupParameters" : [ ],
+                                    "MessageToShow" : "Mashup must be selected",
+                                    "ModalPopupOpacity" : 0.5,
+                                    "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+                                    "NavigationFocusStyle" : "DefaultNavigationFocusStyle",
+                                    "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+                                    "PopupScrolling" : "auto",
+                                    "PopupTitle" : "",
+                                    "PopupTitleStyle" : "DefaultPopupTitleStyle",
+                                    "ReloadOnReplace" : false,
+                                    "ResponsiveLayout" : false,
+                                    "RoundedCorners" : true,
+                                    "ShowCloseButton" : true,
+                                    "ShowDataLoading" : true,
+                                    "ShowMessageIfNoMashup" : false,
+                                    "SingleClickSelectOnTablets" : true,
+                                    "Style" : "DefaultNavigationStyle",
+                                    "TabSequence" : 0,
+                                    "TargetWindow" : "replace",
+                                    "Text" : "Grid View",
+                                    "ToolTipField" : "",
+                                    "ToolTipStyle" : "DefaultTooltipStyle",
+                                    "Top" : 31,
+                                    "Transparent" : false,
+                                    "Type" : "navigation",
+                                    "Visible" : true,
+                                    "Width" : 200,
+                                    "Z-index" : 10,
+                                    "__TypeDisplayName" : "Navigation",
+                                    "__supportsTooltip" : true
+                                  },
+                                  "Widgets" : [ ]
+                                }, {
+                                  "Properties" : {
+                                    "Alignment" : "left",
+                                    "Area" : "UI",
+                                    "ClickOutsideToClose" : false,
+                                    "DisplayName" : "navigation-24",
+                                    "FixedPopupHeight" : 0,
+                                    "FixedPopupWidth" : 0,
+                                    "Height" : 30,
+                                    "Icon" : "",
+                                    "IconAlignment" : "left",
+                                    "Id" : "navigation-24",
+                                    "LastContainer" : false,
+                                    "Left" : 444.9999694824219,
+                                    "MashupName" : "PharmaDashBMashup",
+                                    "MashupParameters" : [ ],
+                                    "MessageToShow" : "Mashup must be selected",
+                                    "ModalPopupOpacity" : 0.5,
+                                    "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+                                    "NavigationFocusStyle" : "DefaultNavigationFocusStyle",
+                                    "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+                                    "PopupScrolling" : "auto",
+                                    "PopupTitle" : "",
+                                    "PopupTitleStyle" : "DefaultPopupTitleStyle",
+                                    "ReloadOnReplace" : false,
+                                    "ResponsiveLayout" : false,
+                                    "RoundedCorners" : true,
+                                    "ShowCloseButton" : true,
+                                    "ShowDataLoading" : true,
+                                    "ShowMessageIfNoMashup" : false,
+                                    "SingleClickSelectOnTablets" : true,
+                                    "Style" : "DefaultNavigationStyle",
+                                    "TabSequence" : 0,
+                                    "TargetWindow" : "replace",
+                                    "Text" : "Dashboard",
+                                    "ToolTipField" : "",
+                                    "ToolTipStyle" : "DefaultTooltipStyle",
+                                    "Top" : 31,
+                                    "Transparent" : false,
+                                    "Type" : "navigation",
+                                    "Visible" : true,
+                                    "Width" : 200,
+                                    "Z-index" : 10,
+                                    "__TypeDisplayName" : "Navigation",
+                                    "__supportsTooltip" : true
+                                  },
+                                  "Widgets" : [ ]
+                                } ]
+                              } ]
+                            }, {
+                              "Properties" : {
+                                "AnimateExpandCollapse" : true,
+                                "Area" : "UI",
+                                "BGImageRepeat" : "no-repeat",
+                                "BGImageSize" : "auto",
+                                "DisplayName" : "Row 1",
+                                "ExpandCollapseTabLocation" : "outside",
+                                "Expanded" : true,
+                                "Id" : "container-11",
+                                "LastContainer" : false,
+                                "MinHeight" : 0,
+                                "MinWidth" : 0,
+                                "Overlay" : false,
+                                "OverlayIsTransparent" : false,
+                                "ResponsiveLayout" : true,
+                                "ShowDataLoading" : true,
+                                "ShowExpandCollapseTab" : false,
+                                "Style" : "DefaultContainerStyle",
+                                "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                                "TabExpandStyle" : "DefaultTabExpandStyle",
+                                "TabHeight" : 36,
+                                "TabLocation" : "center",
+                                "TabOffset" : 0,
+                                "TabWidth" : 36,
+                                "Type" : "container",
+                                "Visible" : true,
+                                "Z-index" : 10,
+                                "__TypeDisplayName" : "Container",
+                                "userCannotRemove" : true
+                              },
+                              "Widgets" : [ ]
+                            } ]
+                          } ]
+                        } ]
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "targetmashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>
