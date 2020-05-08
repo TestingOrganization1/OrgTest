@@ -15,8 +15,8 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         name="Global"
-         projectName="CapStoneProject_MAhesh"
+         name="PharmaPlanProcessor"
+         projectName="Capstone"
          published="false"
          tags=""
          thingTemplate="GenericThing"
@@ -36,18 +36,7 @@
             <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
             <ConfigurationTables></ConfigurationTables>
             <ThingShape>
-                <PropertyDefinitions>
-                    <PropertyDefinition
-                     aspect.cacheTime="0.0"
-                     aspect.dataChangeType="VALUE"
-                     aspect.dataShape="PlantLocation"
-                     baseType="INFOTABLE"
-                     category=""
-                     description=""
-                     isLocalOnly="false"
-                     name="pass"
-                     ordinal="2"></PropertyDefinition>
-                </PropertyDefinitions>
+                <PropertyDefinitions></PropertyDefinitions>
                 <ServiceDefinitions>
                     <ServiceDefinition
                      aspect.isAsync="false"
@@ -57,9 +46,9 @@
                      isLocalOnly="false"
                      isOpen="false"
                      isPrivate="false"
-                     name="GetKPIData">
+                     name="GetKPIdata">
                         <ResultType
-                         aspect.dataShape="KPIInfo"
+                         aspect.dataShape="KPIdatashape"
                          baseType="INFOTABLE"
                          description=""
                          name="result"
@@ -76,7 +65,7 @@
                      isPrivate="false"
                      name="GetMapLocations">
                         <ResultType
-                         aspect.dataShape="PlantLocation"
+                         aspect.dataShape="PharmaDS"
                          baseType="INFOTABLE"
                          description=""
                          name="result"
@@ -90,7 +79,7 @@
                     <ServiceImplementation
                      description=""
                      handlerName="Script"
-                     name="GetKPIData">
+                     name="GetKPIdata">
                         <ConfigurationTables>
                             <ConfigurationTable
                              description=""
@@ -112,63 +101,55 @@
                                         <![CDATA[
                                         var params = {
                                             infoTableName : "InfoTable",
-                                            dataShapeName : "KPIInfo"
+                                            dataShapeName : "KPIdatashape"
                                         };
                                         
-                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(KPIInfo)
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(KPIdatashape)
                                         var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
                                         
-                                        var yldparams = {
-                                            propertyName: "Yield"
+                                        var yldparams={
+                                        	propertyName: "Yield"
                                         };
-                                        
-                                        var wstparams = {
-                                            propertyName: "Wastage"
+                                        var wstparams={
+                                        	propertyName: "Wastage"
                                         };
-                                        
-                                        var cpyparams = {
-                                            propertyName: "Util"
+                                        var cptyparams={
+                                        	propertyName: "CapacityUtilization"
                                         };
-                                        
-                                        var qltyparams = {
-                                            propertyName: "QualityCost"
+                                        var qltyparams={
+                                        	propertyName: "QualityCost"
                                         };
-                                        
-                                        var mnfparams = {
-                                            propertyName: "MfCost"
+                                        var mnfparams={
+                                        	propertyName: "ManufacturingCost"
                                         };
-                                        
-                                        var ordparams = {
-                                            propertyName: "OrderCycleTime"
+                                        var ordparams={
+                                        	propertyName: "OrderCycleTime"
                                         };
-                                        
-                                        var acdparams = {
-                                            propertyName: "AccidentLostTime"
+                                        var acdparams={
+                                        	propertyName: "AccidentLostTime"
                                         };
-                                        
-                                        var nameparams = {
-                                            propertyName: "PlantName"
+                                        var nameparams={
+                                        	propertyName: "PlantName"
                                         };
-                                        
                                         
                                         // result: INFOTABLE dataShape: "RootEntityList"
-                                        var resultnew =  ThingTemplates["CapstoneTT"].GetImplementingThingsWithData();
+                                        var myThings =  ThingTemplates["PharmaPlant"].GetImplementingThingsWithData();
                                         
-                                        for( var i=0; i< resultnew.getRowCount(); i++)
+                                        for(var i=0 ; i<myThings.getRowCount();i++)
                                         {
-                                        var plantThing = Things[resultnew.rows[i].name];
-                                            var newEntry = new Object();
-                                           
-                                            newEntry.Yield = plantThing.GetNumberPropertyValue(yldparams);
-                                            newEntry.Wastage = plantThing.GetNumberPropertyValue(wstparams);
-                                             newEntry.UtilCapacity = plantThing.GetNumberPropertyValue(cpyparams);
-                                             newEntry.QualityCost = plantThing.GetNumberPropertyValue(qltyparams);
-                                             newEntry.MfCost = plantThing.GetNumberPropertyValue(mnfparams);
-                                             newEntry.OrderCycleTime = plantThing.GetNumberPropertyValue(ordparams);
-                                             newEntry.AccidentLostTime = plantThing.GetNumberPropertyValue(acdparams);
-                                             newEntry.PlantName = plantThing.GetStringPropertyValue(nameparams);
-                                            
-                                            result.AddRow(newEntry);
+                                            var plantThing= Things[myThings.rows[i].name];
+                                            // KPIdatashape entry object
+                                        var newEntry = new Object();
+                                        newEntry.Yield = plantThing.GetNumberPropertyValue(yldparams); // NUMBER
+                                        newEntry.Wastage = plantThing.GetNumberPropertyValue(wstparams); // NUMBER
+                                        newEntry.CapacityUtilization = plantThing.GetNumberPropertyValue(cptyparams); // NUMBER
+                                        newEntry.QualityCost = plantThing.GetNumberPropertyValue(qltyparams); // NUMBER
+                                        newEntry.ManufacturingCost = plantThing.GetNumberPropertyValue(mnfparams); // NUMBER
+                                        newEntry.OrderCycleTime = plantThing.GetNumberPropertyValue(ordparams); // NUMBER
+                                        newEntry.AccidentLostTime = plantThing.GetNumberPropertyValue(acdparams); // NUMBER
+                                        newEntry.PlantName = plantThing.GetStringPropertyValue(nameparams); // STRING
+                                        result.AddRow(newEntry);
+                                        
                                         }
                                         ]]>
                                         </code>
@@ -202,37 +183,35 @@
                                         <![CDATA[
                                         var params = {
                                             infoTableName : "InfoTable",
-                                            dataShapeName : "PlantLocation"
+                                            dataShapeName : "PharmaDS"
                                         };
                                         
-                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(PlantLocation)
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(PharmaDS)
                                         var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
                                         
-                                        var latparams = {
+                                        var latparams={
                                             propertyName: "Latitude"
                                         };
-                                        
-                                        var lngparams = {
+                                        var longparams={
                                             propertyName: "Longitude"
                                         };
-                                        
-                                        var nameparams = {
+                                        var nameparams={
                                             propertyName: "PlantName"
                                         };
-                                          // result: INFOTABLE dataShape: "RootEntityList"
-                                        var resultnew =  ThingTemplates["CapstoneTT"].GetImplementingThingsWithData();
+                                        // result: INFOTABLE dataShape: "RootEntityList"
+                                        var myThings =  ThingTemplates["PharmaPlant"].GetImplementingThingsWithData();
                                         
-                                        for( var i=0; i< resultnew.getRowCount(); i++)
+                                        for(var i=0; i<myThings.getRowCount(); i++)
                                         {
-                                        var plantThing = Things[resultnew.rows[i].name];
-                                            var newEntry = new Object();
-                                           
-                                            newEntry.Latitude = plantThing.GetNumberPropertyValue(latparams);
-                                            newEntry.Longitude = plantThing.GetNumberPropertyValue(lngparams);
-                                            newEntry.PlantName = plantThing.GetStringPropertyValue(nameparams);
-                                            result.AddRow(newEntry);
+                                            var plantThing= Things[myThings.rows[i].name];
+                                            // PharmaDS entry object
+                                        var newEntry = new Object();
+                                        newEntry.PlantName = plantThing.GetStringPropertyValue(nameparams); // STRING
+                                        newEntry.Latitude = plantThing.GetNumberPropertyValue(latparams); // NUMBER
+                                        newEntry.Longitude = plantThing.GetNumberPropertyValue(longparams); // NUMBER
+                                        result.AddRow(newEntry);
+                                        
                                         }
-                                        me.pass =result;
                                         ]]>
                                         </code>
                                     </Row>
@@ -247,10 +226,7 @@
             <RemotePropertyBindings></RemotePropertyBindings>
             <RemoteServiceBindings></RemoteServiceBindings>
             <RemoteEventBindings></RemoteEventBindings>
-            <AlertConfigurations>
-                <AlertDefinitions
-                 name="pass"></AlertDefinitions>
-            </AlertConfigurations>
+            <AlertConfigurations></AlertConfigurations>
             <ImplementedShapes></ImplementedShapes>
             <ThingProperties></ThingProperties>
         </Thing>

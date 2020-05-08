@@ -13,8 +13,8 @@
          description=""
          documentationContent=""
          homeMashup=""
-         name="Options_mahesh"
-         projectName="CapStoneProject_MAhesh"
+         name="KPIdatashape"
+         projectName="Capstone"
          tags="">
             <avatar></avatar>
             <DesignTimePermissions>
@@ -32,26 +32,53 @@
             <ConfigurationTables></ConfigurationTables>
             <FieldDefinitions>
                 <FieldDefinition
-                 aspect.defaultValue="1.0"
                  aspect.isPrimaryKey="false"
                  baseType="NUMBER"
                  description=""
-                 name="One"
-                 ordinal="1"></FieldDefinition>
+                 name="AccidentLostTime"
+                 ordinal="7"></FieldDefinition>
                 <FieldDefinition
-                 aspect.defaultValue="3.0"
                  aspect.isPrimaryKey="false"
                  baseType="NUMBER"
                  description=""
-                 name="Three"
+                 name="CapacityUtilization"
                  ordinal="3"></FieldDefinition>
                 <FieldDefinition
-                 aspect.defaultValue="2.0"
                  aspect.isPrimaryKey="false"
                  baseType="NUMBER"
                  description=""
-                 name="Two"
+                 name="ManufacturingCost"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="NUMBER"
+                 description=""
+                 name="OrderCycleTime"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="STRING"
+                 description=""
+                 name="PlantName"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="NUMBER"
+                 description=""
+                 name="QualityCost"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="NUMBER"
+                 description=""
+                 name="Wastage"
                  ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="NUMBER"
+                 description=""
+                 name="Yield"
+                 ordinal="1"></FieldDefinition>
             </FieldDefinitions>
         </DataShape>
     </DataShapes>

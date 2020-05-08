@@ -7,20 +7,13 @@
  revision="4"
  schemaVersion="1053"
  universal="password">
-    <Projects>
-        <Project
-         artifactId=""
-         dependsOn="{&quot;extensions&quot;:&quot;&quot;,&quot;projects&quot;:&quot;&quot;}"
+    <StyleDefinitions>
+        <StyleDefinition
          description=""
          documentationContent=""
-         groupId=""
          homeMashup=""
-         minPlatformVersion=""
-         name="CapStoneProject_MAhesh"
-         packageVersion="1.0.0"
-         projectName="CapStoneProject_MAhesh"
-         publishResult=""
-         state="DRAFT"
+         name="PharmaGrey"
+         projectName="Capstone"
          tags="">
             <avatar></avatar>
             <DesignTimePermissions>
@@ -36,6 +29,24 @@
             </VisibilityPermissions>
             <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
             <ConfigurationTables></ConfigurationTables>
-        </Project>
-    </Projects>
+            <content>
+            <![CDATA[
+            {
+              "backgroundColor" : "rgba(192,192,192,1)",
+              "displayString" : "",
+              "fontEmphasisBold" : false,
+              "fontEmphasisItalic" : false,
+              "fontEmphasisUnderline" : false,
+              "foregroundColor" : "",
+              "image" : "",
+              "lineColor" : "",
+              "lineStyle" : "solid",
+              "lineThickness" : 1,
+              "secondaryBackgroundColor" : "rgba(192,192,192,1)",
+              "textSize" : "normal"
+            }
+            ]]>
+            </content>
+        </StyleDefinition>
+    </StyleDefinitions>
 </Entities>

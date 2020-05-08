@@ -12,8 +12,8 @@
          description=""
          documentationContent=""
          homeMashup=""
-         name="panel_mahesh"
-         projectName="CapStoneProject_MAhesh"
+         name="pharmapanel"
+         projectName="Capstone"
          tags="">
             <avatar></avatar>
             <DesignTimePermissions>
@@ -32,7 +32,7 @@
             <content>
             <![CDATA[
             {
-              "backgroundColor" : "rgba(27,60,132,1)",
+              "backgroundColor" : "rgba(255,255,255,1)",
               "displayString" : "",
               "fontEmphasisBold" : false,
               "fontEmphasisItalic" : false,
@@ -42,7 +42,7 @@
               "lineColor" : "",
               "lineStyle" : "solid",
               "lineThickness" : 1,
-              "secondaryBackgroundColor" : "",
+              "secondaryBackgroundColor" : "rgba(255,255,255,1)",
               "textSize" : "normal"
             }
             ]]>

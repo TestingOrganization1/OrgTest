@@ -13,8 +13,8 @@
          description=""
          documentationContent=""
          homeMashup=""
-         name="KPIInfo"
-         projectName="CapStoneProject_MAhesh"
+         name="PharmaDS"
+         projectName="Capstone"
          tags="">
             <avatar></avatar>
             <DesignTimePermissions>
@@ -35,50 +35,20 @@
                  aspect.isPrimaryKey="false"
                  baseType="NUMBER"
                  description=""
-                 name="AccidentLostTime"
-                 ordinal="7"></FieldDefinition>
+                 name="Latitude"
+                 ordinal="2"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
                  baseType="NUMBER"
                  description=""
-                 name="MfCost"
+                 name="Longitude"
                  ordinal="3"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="OrderCycleTime"
-                 ordinal="5"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
                  baseType="STRING"
                  description=""
                  name="PlantName"
                  ordinal="1"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="QualityCost"
-                 ordinal="6"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="UtilCapacity"
-                 ordinal="8"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="Wastage"
-                 ordinal="4"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="Yield"
-                 ordinal="2"></FieldDefinition>
             </FieldDefinitions>
         </DataShape>
     </DataShapes>

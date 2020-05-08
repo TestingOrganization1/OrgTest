@@ -14,11 +14,11 @@
          documentationContent=""
          effectiveThingPackage="ConfiguredThing"
          homeMashup=""
-         name="CapstoneTT"
-         projectName="CapStoneProject_MAhesh"
+         name="PharmaPlant"
+         projectName="Capstone"
          tags=""
          thingPackage=""
-         valueStream="CapstoneVS">
+         valueStream="PlantVS">
             <avatar></avatar>
             <DesignTimePermissions>
                 <Create></Create>
@@ -41,19 +41,21 @@
                 <AlertDefinitions
                  name="AccidentLostTime"></AlertDefinitions>
                 <AlertDefinitions
+                 name="CapacityUtilization"></AlertDefinitions>
+                <AlertDefinitions
                  name="Latitude"></AlertDefinitions>
+                <AlertDefinitions
+                 name="location"></AlertDefinitions>
                 <AlertDefinitions
                  name="Longitude"></AlertDefinitions>
                 <AlertDefinitions
-                 name="MfCost"></AlertDefinitions>
+                 name="ManufacturingCost"></AlertDefinitions>
                 <AlertDefinitions
                  name="OrderCycleTime"></AlertDefinitions>
                 <AlertDefinitions
                  name="PlantName"></AlertDefinitions>
                 <AlertDefinitions
                  name="QualityCost"></AlertDefinitions>
-                <AlertDefinitions
-                 name="Util"></AlertDefinitions>
                 <AlertDefinitions
                  name="Wastage"></AlertDefinitions>
                 <AlertDefinitions
@@ -77,6 +79,21 @@
                      aspect.dataChangeType="VALUE"
                      aspect.isLogged="true"
                      aspect.isPersistent="true"
+                     aspect.maximumValue="100.0"
+                     aspect.minimumValue="0.0"
+                     baseType="NUMBER"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="CapacityUtilization"
+                     ordinal="7"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isLogged="true"
+                     aspect.isPersistent="true"
+                     aspect.maximumValue="100.0"
+                     aspect.minimumValue="0.0"
                      baseType="NUMBER"
                      category=""
                      description=""
@@ -88,6 +105,19 @@
                      aspect.dataChangeType="VALUE"
                      aspect.isLogged="true"
                      aspect.isPersistent="true"
+                     baseType="LOCATION"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="location"
+                     ordinal="12"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.isLogged="true"
+                     aspect.isPersistent="true"
+                     aspect.maximumValue="100.0"
+                     aspect.minimumValue="0.0"
                      baseType="NUMBER"
                      category=""
                      description=""
@@ -99,11 +129,13 @@
                      aspect.dataChangeType="VALUE"
                      aspect.isLogged="true"
                      aspect.isPersistent="true"
+                     aspect.maximumValue="100.0"
+                     aspect.minimumValue="0.0"
                      baseType="NUMBER"
                      category=""
                      description=""
                      isLocalOnly="false"
-                     name="MfCost"
+                     name="ManufacturingCost"
                      ordinal="9"></PropertyDefinition>
                     <PropertyDefinition
                      aspect.cacheTime="0.0"
@@ -132,6 +164,8 @@
                      aspect.dataChangeType="VALUE"
                      aspect.isLogged="true"
                      aspect.isPersistent="true"
+                     aspect.maximumValue="100.0"
+                     aspect.minimumValue="0.0"
                      baseType="NUMBER"
                      category=""
                      description=""
@@ -143,17 +177,8 @@
                      aspect.dataChangeType="VALUE"
                      aspect.isLogged="true"
                      aspect.isPersistent="true"
-                     baseType="NUMBER"
-                     category=""
-                     description=""
-                     isLocalOnly="false"
-                     name="Util"
-                     ordinal="7"></PropertyDefinition>
-                    <PropertyDefinition
-                     aspect.cacheTime="0.0"
-                     aspect.dataChangeType="VALUE"
-                     aspect.isLogged="true"
-                     aspect.isPersistent="true"
+                     aspect.maximumValue="100.0"
+                     aspect.minimumValue="0.0"
                      baseType="NUMBER"
                      category=""
                      description=""
@@ -165,6 +190,8 @@
                      aspect.dataChangeType="VALUE"
                      aspect.isLogged="true"
                      aspect.isPersistent="true"
+                     aspect.maximumValue="100.0"
+                     aspect.minimumValue="0.0"
                      baseType="NUMBER"
                      category=""
                      description=""
