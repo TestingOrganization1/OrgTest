@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b222"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="4"
+ schemaVersion="1053"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="LogMashup"
+         projectName="ColdChainMonotoringSystem"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="Admin"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ServiceEngineer"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="Admin"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ServiceEngineer"
+                         type="Group"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Admin"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ServiceEngineer"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Admin"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ServiceEngineer"
+                         type="Group"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="Admin"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ServiceEngineer"
+                         type="Group"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="ColdChainORG"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things>
+                <Thing>LogTable</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : ".widget-dhxgrid .gridbox .objbox { \n                overflow-x:hidden !important; \n                }",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_LogTable" : {
+                  "DataName" : "Things_LogTable",
+                  "EntityName" : "LogTable",
+                  "EntityType" : "Things",
+                  "Id" : "8fa5429b-64a1-4313-a159-340815a832e3",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "5d4a659d-b78c-4fbe-9f25-ab9e4adda6da",
+                    "Name" : "GetDataTableEntries",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDataTableEntries"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "55f085a8-4104-46b9-ab42-63de16aa3047",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDataTableEntries",
+                "SourceSection" : "Things_LogTable",
+                "TargetArea" : "UI",
+                "TargetId" : "gridadvanced-9",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_LogTable",
+                "EventHandlerService" : "GetDataTableEntries",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "ff424e61-e4df-479e-835a-ac17242bb972"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ {
+                  "EventInvoke" : [ {
+                    "isPermitted" : true,
+                    "name" : "ServiceEngineer",
+                    "type" : "Group"
+                  }, {
+                    "isPermitted" : true,
+                    "name" : "Admin",
+                    "type" : "Group"
+                  } ],
+                  "EventSubscribe" : [ {
+                    "isPermitted" : true,
+                    "name" : "ServiceEngineer",
+                    "type" : "Group"
+                  }, {
+                    "isPermitted" : true,
+                    "name" : "Admin",
+                    "type" : "Group"
+                  } ],
+                  "PropertyRead" : [ {
+                    "isPermitted" : true,
+                    "name" : "ServiceEngineer",
+                    "type" : "Group"
+                  }, {
+                    "isPermitted" : true,
+                    "name" : "Admin",
+                    "type" : "Group"
+                  } ],
+                  "PropertyWrite" : [ {
+                    "isPermitted" : true,
+                    "name" : "ServiceEngineer",
+                    "type" : "Group"
+                  }, {
+                    "isPermitted" : true,
+                    "name" : "Admin",
+                    "type" : "Group"
+                  } ],
+                  "ServiceInvoke" : [ {
+                    "isPermitted" : true,
+                    "name" : "ServiceEngineer",
+                    "type" : "Group"
+                  }, {
+                    "isPermitted" : true,
+                    "name" : "Admin",
+                    "type" : "Group"
+                  } ],
+                  "resourceName" : "*"
+                } ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupResolution" : "HD 1280x720",
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleTheme" : "PTC Convergence Theme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "MashupTemplate",
+                  "flex-grow" : 0,
+                  "flex-shrink" : 0,
+                  "id_index" : 9,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "flexcontainer-2",
+                    "EnableExpandCollapse" : false,
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-2",
+                    "LastContainer" : true,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Type" : "flexcontainer",
+                    "UseTheme" : false,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Flex Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "flex-start",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "row",
+                    "flex-grow" : 1,
+                    "flex-height" : 0,
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : 0,
+                    "flex-size" : "default",
+                    "flex-width" : 0,
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "isLocked" : true,
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "AutoScroll" : true,
+                      "CellBorderStyle" : "DefaultGridAdvancedCellBorderStyle",
+                      "CellValidationErrorStyle" : "DefaultGridAdvancedCellValidationErrorStyle",
+                      "CellValidationErrorTooltipStyle" : "DefaultGridAdvancedCellValidationErrorTooltipStyle",
+                      "ColumnFormat" : {
+                        "formatInfo" : [ {
+                          "Align" : "center",
+                          "AllowEdit" : false,
+                          "EditorOptions" : {
+                            "Type" : "number",
+                            "Validators" : [ "None", "NotEmpty", "Empty", "ValidNumeric", "ValidCurrency", "Custom" ]
+                          },
+                          "FieldName" : "ID",
+                          "FormatOptions" : {
+                            "FormatString" : "0.00",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "NUMBER",
+                            "roundingEnabled" : true
+                          },
+                          "Title" : "ID",
+                          "Width" : "100px",
+                          "headerTextAlignment" : "center",
+                          "hidden" : true,
+                          "inLayout" : true
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : true,
+                          "EditorOptions" : {
+                            "Type" : "string",
+                            "Validators" : [ "None", "NotEmpty", "Empty", "Custom", "ValidAlphaNumeric", "ValidEmail", "ValidIPv4", "ValidSIN", "ValidSSN" ]
+                          },
+                          "FieldName" : "Name",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "STRING",
+                            "roundingEnabled" : true
+                          },
+                          "Title" : "Name",
+                          "Width" : "120px",
+                          "headerTextAlignment" : "left",
+                          "hidden" : false,
+                          "inLayout" : true
+                        }, {
+                          "Align" : "center",
+                          "AllowEdit" : false,
+                          "EditorOptions" : {
+                            "Type" : "date",
+                            "Validators" : [ "None", "NotEmpty", "Empty", "ValidDate", "ValidDatetime", "ValidTime", "Custom" ]
+                          },
+                          "FieldName" : "timestamp",
+                          "FormatOptions" : {
+                            "FormatString" : "[[dateTimeFormat_Default]]",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "DATETIME",
+                            "roundingEnabled" : true
+                          },
+                          "Title" : "Timestamp",
+                          "Width" : "295px",
+                          "headerTextAlignment" : "center",
+                          "hidden" : false,
+                          "inLayout" : true
+                        }, {
+                          "Align" : "center",
+                          "AllowEdit" : false,
+                          "EditorOptions" : {
+                            "Type" : "string",
+                            "Validators" : [ "None", "NotEmpty", "Empty", "Custom", "ValidAlphaNumeric", "ValidEmail", "ValidIPv4", "ValidSIN", "ValidSSN" ]
+                          },
+                          "FieldName" : "Alert",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "STRING",
+                            "roundingEnabled" : true
+                          },
+                          "Title" : "Alert",
+                          "Width" : "375px",
+                          "headerTextAlignment" : "center",
+                          "hidden" : false,
+                          "inLayout" : true
+                        }, {
+                          "Align" : "center",
+                          "AllowEdit" : false,
+                          "EditorOptions" : {
+                            "Type" : "string",
+                            "Validators" : [ "None", "NotEmpty", "Empty", "Custom", "ValidAlphaNumeric", "ValidEmail", "ValidIPv4", "ValidSIN", "ValidSSN" ]
+                          },
+                          "FieldName" : "Comments",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "STRING",
+                            "roundingEnabled" : true
+                          },
+                          "Title" : "Comments",
+                          "Width" : "300px",
+                          "headerTextAlignment" : "center",
+                          "hidden" : false,
+                          "inLayout" : true
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "EditorOptions" : {
+                            "Type" : "string",
+                            "Validators" : [ "None", "NotEmpty", "Empty", "Custom", "ValidAlphaNumeric", "ValidEmail", "ValidIPv4", "ValidSIN", "ValidSSN" ]
+                          },
+                          "FieldName" : "source",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "formatInfo" : {
+                              "FieldName" : "",
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "StateFormats" : [ {
+                                "state" : "",
+                                "stateName" : "fixed"
+                              } ]
+                            },
+                            "renderer" : "STRING",
+                            "roundingEnabled" : true
+                          },
+                          "Title" : "Source",
+                          "Width" : "70px",
+                          "headerTextAlignment" : "left",
+                          "hidden" : true,
+                          "inLayout" : true
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "EditorOptions" : {
+                            "Type" : "string",
+                            "Validators" : [ "None", "NotEmpty", "Empty", "Custom", "ValidAlphaNumeric", "ValidEmail", "ValidIPv4", "ValidSIN", "ValidSSN" ]
+                          },
+                          "FieldName" : "sourceType",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "sourceType",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto",
+                          "hidden" : true,
+                          "inLayout" : true
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "EditorOptions" : {
+                            "Type" : "string",
+                            "Validators" : [ "None", "NotEmpty", "Empty", "Custom" ]
+                          },
+                          "FieldName" : "location",
+                          "FormatOptions" : {
+                            "FormatString" : "0.0000",
+                            "renderer" : "LOCATION"
+                          },
+                          "Title" : "location",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto",
+                          "hidden" : true,
+                          "inLayout" : true
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "EditorOptions" : {
+                            "Type" : "string",
+                            "Validators" : [ "None", "NotEmpty", "Empty", "Custom", "ValidAlphaNumeric", "ValidEmail", "ValidIPv4", "ValidSIN", "ValidSSN" ]
+                          },
+                          "FieldName" : "key",
+                          "FormatOptions" : {
+                            "FormatString" : "full",
+                            "renderer" : "STRING"
+                          },
+                          "Title" : "key",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto",
+                          "hidden" : true,
+                          "inLayout" : true
+                        }, {
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "EditorOptions" : {
+                            "Type" : "string",
+                            "Validators" : [ "None", "NotEmpty", "Empty", "Custom" ]
+                          },
+                          "FieldName" : "tags",
+                          "FormatOptions" : {
+                            "FormatString" : "plain",
+                            "renderer" : "TAGS"
+                          },
+                          "Title" : "tags",
+                          "ValidationExpression" : "",
+                          "ValidationMessage" : "",
+                          "Width" : "auto",
+                          "hidden" : true,
+                          "inLayout" : true
+                        } ]
+                      },
+                      "Configuration" : "",
+                      "ConfigurationId" : 40,
+                      "CookiePersistence" : true,
+                      "DataOverflow" : "clipped",
+                      "DataServiceBindingDef" : {
+                        "entityName" : "LogTable",
+                        "entityType" : "Things",
+                        "target" : "GetDataTableEntries"
+                      },
+                      "DefaultSelectedRows" : "",
+                      "DisplayName" : "gridadvanced-9",
+                      "DisplayOnlyMode" : false,
+                      "EditButtonsLocation" : "top-right",
+                      "EnableAddDeleteButtons" : false,
+                      "EnableContextMenu" : true,
+                      "EnableEditButtons" : false,
+                      "EnableFilterEventOnConfigChange" : true,
+                      "EnableFooter" : false,
+                      "EnableGridReset" : false,
+                      "EnableGridSearch" : false,
+                      "EnableSorting" : false,
+                      "FocusStyle" : "DefaultFocusStyle",
+                      "GridResetButtonLocation" : "top-right",
+                      "GridSearchLocation" : "top-left",
+                      "HeaderOverflow" : "tooltip",
+                      "Height" : 200,
+                      "IDFieldName" : "id",
+                      "Id" : "gridadvanced-9",
+                      "IsEditable" : false,
+                      "LastContainer" : false,
+                      "Left" : 55,
+                      "MaxHeaderHeight" : 100,
+                      "MinRowHeight" : 30,
+                      "ResponsiveLayout" : true,
+                      "RowAlternateBackgroundStyle" : "DefaultGridAdvancedRowAlternateBackgroundStyle",
+                      "RowBackgroundStyle" : "DefaultGridAdvancedRowBackgroundStyle",
+                      "RowBorderStyle" : "DefaultGridAdvancedRowBorderStyle",
+                      "RowFormat_StateParameters" : [ ],
+                      "RowHoverStyle" : "DefaultGridAdvancedRowHoverStyle",
+                      "RowSelectedStyle" : "DefaultGridAdvancedRowSelectedStyle",
+                      "RowSelection" : "none",
+                      "SelectedRows" : "",
+                      "ShowDataLoading" : true,
+                      "SortAscendingStyle" : "DefaultSortAscendingStyle",
+                      "SortDescendingStyle" : "DefaultSortDescendingStyle",
+                      "TableFooterStyle" : "DefaultGridAdvancedFooterStyle",
+                      "TableHeaderStyle" : "DefaultGridAdvancedHeaderStyle",
+                      "TableWrapperStyle" : "DefaultGridAdvancedWrapperStyle",
+                      "ToolbarStyle" : "DefaultToolbarStyle",
+                      "TooltipStyle" : "DefaultTooltipStyle",
+                      "Top" : 35,
+                      "Type" : "gridadvanced",
+                      "UseTheme" : false,
+                      "Visible" : true,
+                      "Width" : 400,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Grid Advanced"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "mashupTemplate"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b222"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="4"
+ schemaVersion="1053"
+ universal="password">
+    <StyleThemes>
+        <StyleTheme
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="AlarmStyleTheme"
+         projectName="ColdChainMonotoringSystem"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "CustomCss" : {
+                "value" : ""
+              },
+              "props" : [ {
+                "name" : "global-text-subheader-fontfamily",
+                "value" : "Verdana"
+              }, {
+                "name" : "global-text-subheader-fontsize",
+                "value" : "18px"
+              }, {
+                "name" : "global-text-label-fontfamily",
+                "value" : "Open Sans"
+              }, {
+                "name" : "global-color-text-header",
+                "value" : "#ff981a"
+              }, {
+                "name" : "global-color-text-label",
+                "value" : "#ff981a"
+              }, {
+                "name" : "global-color-text-subheader",
+                "value" : "#ff981a"
+              }, {
+                "name" : "global-color-text-body",
+                "value" : "#ff981a"
+              } ],
+              "version" : "0.1"
+            }
+            ]]>
+            </content>
+            <preview></preview>
+        </StyleTheme>
+    </StyleThemes>
+</Entities>
